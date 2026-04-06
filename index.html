@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leant Merch Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Jacquard+24&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --brand-purple: #5E429E;
+            --brand-green: #00FF44;
+        }
+
+        body {
+            background-color: #050505;
+            color: white;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            /* Background usando o seu SVG */
+            background-image: url('magicpattern-grid-pattern-1775325920264 2.svg');
+            background-repeat: repeat;
+            background-size: 400px; /* Ajuste o tamanho conforme preferir */
+            background-attachment: fixed;
+        }
+
+        .jacquard {
+            font-family: 'Jacquard 24', system-ui;
+        }
+
+        /* Esconder a barra de scroll mas manter a funcionalidade */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Efeito Glassmorphism dos cards */
+        .glass-card {
+            background: rgba(15, 15, 15, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Animação suave para os itens */
+        .hover-trigger:hover img {
+            transform: scale(1.05);
+            filter: brightness(1.1);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="fixed top-0 w-full z-50 flex justify-between items-center p-6 bg-black/50 backdrop-blur-md">
+        <div class="flex gap-4 text-[10px] md:text-xs uppercase tracking-[0.2em] font-bold">
+            <a href="#" class="hover:text-[var(--brand-purple)] transition">Home</a>
+            <a href="#" class="hover:text-[var(--brand-purple)] transition">Collections</a>
+            <a href="#" class="hover:text-[var(--brand-purple)] transition">Products</a>
+            <a href="#" class="hover:text-[var(--brand-purple)] transition">About us</a>
+        </div>
+        <div class="text-xl">
+            <svg class="w-5 h-5 fill-white" viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+        </div>
+    </nav>
+
+    <header class="pt-32 pb-16 flex flex-col items-center">
+        <img src="Dog 4x.png" alt="Leant Logo" class="w-40 md:w-56 drop-shadow-[0_0_35px_rgba(94,66,158,0.4)]">
+        <h1 class="jacquard text-7xl md:text-9xl mt-[-15px] tracking-tight">Leant</h1>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 overflow-hidden">
+        
+        <section class="mb-20">
+            <h2 class="text-2xl font-bold mb-6 italic italic pl-2">Collections</h2>
+            
+            <div class="flex overflow-x-auto gap-6 no-scrollbar snap-x snap-mandatory pb-8">
+                
+                <div class="snap-center shrink-0 w-[85vw] md:w-[600px] glass-card rounded-[40px] p-8 flex flex-col md:flex-row items-center gap-6 hover-trigger transition-all duration-500">
+                    <div class="flex-1 order-2 md:order-1 text-center md:text-left">
+                        <h3 class="jacquard text-5xl mb-4 leading-none">Welcome home doggy</h3>
+                        <p class="text-zinc-400 text-sm mb-6 leading-relaxed">Merch exclusivo inspirado no novo single. Sinta o peso da estética Leant.</p>
+                        <div class="flex gap-3 justify-center md:justify-start">
+                            <button class="bg-white text-black px-8 py-3 rounded-full font-bold text-xs uppercase hover:bg-[var(--brand-purple)] hover:text-white transition-colors">See collection</button>
+                            <button class="bg-zinc-900 border border-zinc-700 p-3 rounded-full hover:border-white transition" onclick="window.open('//open.spotify.com/intl-pt/artist/01DWiz55UPC4lQOGIo4z5n?si=-ekQoPY6SJaCntzPWVFHWw', '_blank')">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" class="w-5 h-5">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-56 h-56 rounded-3xl overflow-hidden order-1 md:order-2">
+                        <img src="leant-vintage-cap-embroidered-dad-hat.jpg" class="w-full h-full object-cover transition-transform duration-700">
+                    </div>
+                </div>
+
+                <div class="snap-center shrink-0 w-[85vw] md:w-[600px] glass-card rounded-[40px] p-8 flex flex-col md:flex-row items-center gap-6 hover-trigger transition-all duration-500">
+                    <div class="flex-1 order-2 md:order-1 text-center md:text-left">
+                        <h3 class="jacquard text-5xl mb-4 leading-none">Empty</h3>
+                        <p class="text-zinc-400 text-sm mb-6 leading-relaxed">Minimalismo gótico para quem entende o silêncio. Nova drop disponível.</p>
+                        <div class="flex gap-3 justify-center md:justify-start">
+                            <button class="bg-white text-black px-8 py-3 rounded-full font-bold text-xs uppercase hover:bg-[var(--brand-purple)] hover:text-white transition-colors">See collection</button>
+                            <button class="bg-zinc-900 border border-zinc-700 p-3 rounded-full hover:border-white transition" onclick="window.open('//open.spotify.com/intl-pt/artist/01DWiz55UPC4lQOGIo4z5n?si=-ekQoPY6SJaCntzPWVFHWw', '_blank')">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" class="w-5 h-5">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-56 h-56 rounded-3xl overflow-hidden order-1 md:order-2">
+                        <img src="leant-logo-hoodie-black-pullover-sweatshirt.jpg" class="w-full h-full object-cover transition-transform duration-700">
+                    </div>
+                </div>
+
+                <div class="snap-center shrink-0 w-[85vw] md:w-[600px] glass-card rounded-[40px] p-8 flex flex-col md:flex-row items-center gap-6 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all">
+                   <h3 class="jacquard text-4xl">Coming Soon...</h3>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="grid md:grid-cols-2 gap-16 mb-32">
+            
+            <div>
+                <h2 class="jacquard text-4xl mb-8 border-b border-zinc-800 pb-2 opacity-80">Welcome home doggy</h2>
+                <div class="space-y-6">
+                    <div class="flex items-center justify-between group cursor-pointer border-b border-zinc-900 pb-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-16 h-16 bg-zinc-900 rounded-lg overflow-hidden border border-zinc-800">
+                                <img src="leant-vintage-cap-embroidered-dad-hat.jpg" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition">
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm tracking-wide group-hover:text-[var(--brand-purple)] transition">LEANT VINTAGE CAP</h4>
+                                <p class="text-[10px] text-zinc-500 uppercase">Embroidered Dad Hat</p>
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <span class="block font-bold text-lg">199,90$</span>
+                            <span class="text-[10px] text-[var(--brand-green)] opacity-0 group-hover:opacity-100 transition">ADD TO CART</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between group cursor-pointer border-b border-zinc-900 pb-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-16 h-16 bg-zinc-900 rounded-lg overflow-hidden border border-zinc-800 text-center flex items-center justify-center jacquard text-2xl">L</div>
+                            <div>
+                                <h4 class="font-bold text-sm tracking-wide">LEANT LIMITED TEE</h4>
+                                <p class="text-[10px] text-zinc-500 uppercase">Coming soon</p>
+                            </div>
+                        </div>
+                        <span class="font-bold text-lg">---</span>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="jacquard text-4xl mb-8 border-b border-zinc-800 pb-2 opacity-80">Empty</h2>
+                <div class="space-y-6">
+                    <div class="flex items-center justify-between group cursor-pointer border-b border-zinc-900 pb-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-16 h-16 bg-zinc-900 rounded-lg overflow-hidden border border-zinc-800">
+                                <img src="leant-logo-hoodie-black-pullover-sweatshirt.jpg" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition">
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm tracking-wide group-hover:text-[var(--brand-purple)] transition">LOGO HOODIE</h4>
+                                <p class="text-[10px] text-zinc-500 uppercase">Black Pullover</p>
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <span class="block font-bold text-lg">199,90$</span>
+                            <span class="text-[10px] text-[var(--brand-green)] opacity-0 group-hover:opacity-100 transition">ADD TO CART</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="pb-20 text-center relative">
+            <h2 class="text-xl font-bold mb-8 italic">About Us</h2>
+            <img src="Dog 4x.png" class="w-20 mx-auto mb-4 opacity-50">
+            <p class="jacquard text-4xl mb-4">Leant</p>
+            <p class="max-w-md mx-auto text-xs text-zinc-500 leading-relaxed uppercase tracking-widest px-4">
+                Born in the shadows, crafted for the stage. High quality merch for the loyal ones.
+            </p>
+            <div class="jacquard text-[var(--brand-green)] text-3xl mt-10 animate-pulse">
+                for the loyal
+            </div>
+        </footer>
+
+    </main>
+
+</body>
+</html>
